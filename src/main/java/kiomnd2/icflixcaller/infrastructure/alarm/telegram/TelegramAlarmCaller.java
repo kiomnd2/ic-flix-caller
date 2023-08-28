@@ -26,7 +26,7 @@ public class TelegramAlarmCaller implements AlarmCaller {
                 .text(requestAlarm.getMessage())
                 .build();
         HttpEntity<String> request = new HttpEntity<>(requestAlarm.toString());
-        String s = restTemplate.postForObject(telegramProperties.getUrl(), request, String.class);
+        String s = restTemplate.postForObject(telegramProperties.getSendUrl(), request, String.class);
         System.out.println("s = " + s);
     }
 }

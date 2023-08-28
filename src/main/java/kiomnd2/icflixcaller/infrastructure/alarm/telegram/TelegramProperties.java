@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Setter
 @ConfigurationProperties(prefix = "telegram")
 public class TelegramProperties {
-    private String url;
+    private String sendUrl;
     private String chatId;
     private String token;
 }
